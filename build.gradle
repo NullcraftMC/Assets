@@ -18,3 +18,8 @@ lesscss {
 task clean {
     delete 'target'
 }
+
+task copyImages(type: Copy) {
+    from 'src/main/img'
+    into 'target/img'
+}
