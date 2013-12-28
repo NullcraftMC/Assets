@@ -9,6 +9,7 @@ out/
 target/
 MANIFEST.MF
 dependency-reduced-pom.xml
+.gradle/
 *.com
 *.class
 *.dll
