@@ -1,0 +1,24 @@
+@columns: 12;
+
+.loop-spans (@i: @columns) when (@i > 0) {
+  > .span@{i} {
+    width: @i / @columns * 100%;
+    float: left;
+  }
+  .loop-spans(@i - 1);
+}
+
+.row {
+  .loop-spans(@columns);
+
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+
+  display: inline-block;
+}

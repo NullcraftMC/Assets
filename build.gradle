@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'de.obqo.gradle:gradle-lesscss-plugin:1.0-1.3.3'
+    }
+}
+
+apply plugin: 'lesscss'
+
+lesscss {
+    source = fileTree('src/main/less').include('*.less')
+    dest = 'target/css'
+    compress = true
+}
+
+task clean {
+    delete 'target'
+}
