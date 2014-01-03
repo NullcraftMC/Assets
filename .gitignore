@@ -71,3 +71,7 @@ nb-configuration.xml
 *.iml
 *.ipr
 *.iws
+
+# Webdesign
+#-----------
+test.html
